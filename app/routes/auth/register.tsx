@@ -63,7 +63,7 @@ export let action: ActionFunction = async ({
     password: input.data.password,
   });
 
-  if (typeof userOrError === 'string') {
+  if (typeof userOrError === "string") {
     return {
       fields: input.data,
       formError: userOrError,
@@ -76,28 +76,31 @@ export let action: ActionFunction = async ({
 export default function Register() {
   let [searchParams] = useSearchParams();
   return (
-    <div className="max-w-xl mx-auto p-8 bg-gray-50 md:mt-16 rounded-lg">
-      <div className="content">
-        <h1 className="text-6xl font-extrabold text-gray-900 text-center">
-          Sign up
-        </h1>
-        <Form className="mt-8">
-          <input
-            type="hidden"
-            name="redirectTo"
-            value={searchParams.get("redirectTo") ?? "/"}
-          />
-          <Input className="w-full" name="email" type="email" label="E-Mail" />
-          <Input className="w-full" name="username" type="text" label="Username" />
-          <Input
-            className="w-full"
-            name="password"
-            type="password"
-            label="Password"
-          />
-          <SubmitButton className="mt-4">Submit</SubmitButton>
-        </Form>
-      </div>
+    <div className="content">
+      <h1 className="text-6xl font-extrabold text-gray-900 text-center">
+        Sign up
+      </h1>
+      <Form className="mt-8">
+        <input
+          type="hidden"
+          name="redirectTo"
+          value={searchParams.get("redirectTo") ?? "/"}
+        />
+        <Input className="w-full" name="email" type="email" label="E-Mail" />
+        <Input
+          className="w-full"
+          name="username"
+          type="text"
+          label="Username"
+        />
+        <Input
+          className="w-full"
+          name="password"
+          type="password"
+          label="Password"
+        />
+        <SubmitButton className="mt-4">Submit</SubmitButton>
+      </Form>
     </div>
   );
 }
