@@ -1,9 +1,9 @@
 import { Post } from "@prisma/client";
 import { LoaderFunction, ActionFunction, redirect } from "remix";
-import Form from "~/components/Form";
+import Form, { ActionData } from "~/components/Form";
+import { Input } from "~/components/Input";
 import { SubmitButton } from "~/components/SubmitButton";
 import { z } from "zod";
-import { Input, ActionData } from "~/components/Input";
 import { db } from "~/utils/db.server";
 import { getUserId, requireUserId } from "~/utils/session.server";
 import { convertIssues } from "~/utils/zod";

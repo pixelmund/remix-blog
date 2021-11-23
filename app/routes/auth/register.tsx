@@ -5,8 +5,8 @@ import {
   createUserSession,
   getUserId,
 } from "~/utils/session.server";
-import { Input, ActionData } from "~/components/Input";
-import Form from "~/components/Form";
+import { Input } from "~/components/Input";
+import Form, { ActionData } from "~/components/Form";
 import { SubmitButton } from "~/components/SubmitButton";
 import { z } from "zod";
 import { convertIssues } from "~/utils/zod";

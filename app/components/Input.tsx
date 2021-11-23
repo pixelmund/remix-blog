@@ -6,11 +6,6 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-export type ActionData<
-  FieldErrors = Record<string, string>,
-  Fields = Record<string, any>
-> = { formError?: string; fieldErrors?: FieldErrors; fields: Fields };
-
 export function Input({
   name,
   defaultValue,

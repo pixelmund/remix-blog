@@ -38,7 +38,7 @@ export function TextArea({
         aria-describedby={isInvalid ? `${name}-error` : undefined}
       />
       {isInvalid && (
-        <p className="form-validation-error" role="alert" id={`${name}-error`}>
+        <p className="mt-4 text-red-500 text-sm" role="alert" id={`${name}-error`}>
           {actionDataError}
         </p>
       )}
