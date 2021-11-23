@@ -27,7 +27,7 @@ export default function Home() {
     <div className="max-w-2xl mx-auto px-3 sm:px-4 mt-12">
       <h1 className="text-8xl font-extrabold text-gray-900 mt-8">Remix Blog</h1>
       <p className="text-3xl text-gray-900 font-medium mt-6">
-        It uses prisma, zod for validation and offers authentication/sessions.
+        It uses express, prisma, zod for validation and offers authentication/sessions as well as integrated tailwindcss
       </p>
       <div className="mt-12">
         {Boolean(user) ? (
