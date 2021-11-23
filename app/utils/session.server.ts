@@ -95,3 +95,10 @@ export async function requireUserId(
   }
   return userId;
 }
+
+export async function logout(request: Request) {
+  let session = await storage.getSession(request.headers.get("Cookie"));
+  return redirect("/", {
+    headers: { "Set-Cookie": await storage.destroySession(session) },
+  });
+}

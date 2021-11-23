@@ -602,6 +602,9 @@ video {
 .mb-6 {
 	margin-bottom: 1.5rem;
 }
+.ml-4 {
+	margin-left: 1rem;
+}
 .block {
 	display: block;
 }
@@ -650,6 +653,11 @@ video {
 }
 .justify-between {
 	justify-content: space-between;
+}
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .rounded-md {
 	border-radius: 0.375rem;
